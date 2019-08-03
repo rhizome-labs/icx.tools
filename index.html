@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>ICX Staking Reward Calculator</title>
+    <meta name="description" content="Use this calculator to calcluate rewards for staking ICX.">
+    <meta name="og:title" property="og:title" content="ICX Staking Reward Calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48437220-19"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48437220-19');
+    </script>
+
+    <script type="text/javascript">
+        function func() {
+            let rMax = 0.12;
+            let rMin = 0.02;
+            let rPoint = 0.7;
+            let lMin = 5;
+            let lMax = 20;
+            let icxHoldings = parseFloat(document.F1.T1.value);
+            let percentStaked = parseFloat(document.F1.T2.value);
+            let rRep = ((rMax - rMin) / (Math.pow(rPoint, 2))) * (Math.pow(percentStaked / 100 - rPoint, 2)) + rMin;
+            let lPeriod = ((lMax - lMin) / (Math.pow(rPoint, 2))) * (Math.pow(percentStaked / 100 - rPoint, 2)) + lMin;
+
+            if (percentStaked > 70) {
+                rRep = 0.02;
+            }
+            if (percentStaked > 70) {
+                lPeriod = 5;
+            }
+
+            let totalRewardRate = rRep * 3 * 100;
+            let icxYearlyReward = (totalRewardRate * icxHoldings) / 100;
+            let icxMonthlyReward = icxYearlyReward / 12;
+
+            if (percentStaked < 70 && percentStaked >= 0) {
+                document.F2.T3.value = "~" + Math.round(totalRewardRate * 100) / 100 + "% per year";
+                document.F2.T4.value = "~" + Math.round(lPeriod * 100) / 100 + " days";
+                document.F2.T5.value = "~" + Math.round(icxYearlyReward * 100) / 100 + " ICX per year";
+                document.F2.T6.value = "~" + Math.round(icxMonthlyReward * 100) / 100 + " ICX per month";
+
+            } else if (percentStaked >= 70 && percentStaked <= 100) {
+                document.F2.T3.value = Math.round(totalRewardRate * 100) / 100 + "% per year";
+                document.F2.T4.value = Math.round(lPeriod * 100) / 100 + " days";
+                document.F2.T5.value = "~" + Math.round(icxYearlyReward * 100) / 100 + " ICX per year";
+                document.F2.T6.value = "~" + Math.round(icxMonthlyReward * 100) / 100 + " ICX per month";
+
+            } else {
+                document.F2.T3.value = percentStaked + "% is IMPOSSIBLE";
+                document.F2.T4.value = percentStaked + "% is IMPOSSIBLE";
+                document.F2.T5.value = percentStaked + "% is IMPOSSIBLE";
+                document.F2.T6.value = percentStaked + "% is IMPOSSIBLE";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">ICX Staking Reward Calculator</h1>
+        <div class="content">
+            <p>This tool calculates the expected ICX rewards for staking to all three categories (representatives, DApps, and EEPs).</p>
+            <p>Click <a href="https://decrypto.net/icons-icx-staking-reward-model/">here</a> to learn more about ICON's staking reward model.</p>
+        </div>
+        <h2>INPUT</h2>
+        <form name="F1">
+            <input type="text" name="T1" placeholder="ICX Holdings">
+            <span class="description">The amount of ICX you will stake.</span>
+            <input type="text" name="T2" placeholder="% Network Staked">
+            <span class="description">Staked ICX divided by the total supply of ICX. Early estimates suggest a figure of 30%.</span>
+            <input type="button" id="calculate" value="Calculate" onclick="func()">
+        </form>
+
+        <h2>RESULTS</h2>
+        <form name="F2">
+            <input type="text" name="T3" placeholder="Yearly Reward Rate">
+            <input type="text" name="T4" placeholder="Unstaking Period">
+            <span class="description">The number of days your initial ICX stake is locked up. The unstaking period is not the amount of days before you can receive rewards.</span>
+            <input type="text" name="T5" placeholder="ICX Rewards Per Year">
+            <input type="text" name="T6" placeholder="ICX Rewards Per Month">
+        </form>
+
+        <div class="footer">
+            <div class="copyright">
+                <span>© 2019 ICX.DEV</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+    
+    </script>
+</body>
+
+</html>
