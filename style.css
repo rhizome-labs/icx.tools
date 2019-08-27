@@ -16,13 +16,11 @@ html {
 }
  a {
      color: #fafafa;
-     border-bottom: 1px solid #fafafa;
      text-decoration: none;
 }
  a:hover {
      border:0;
      text-decoration: none;
-     color: #fafafa;
 }
  h1 {
      font-size: 4rem;
