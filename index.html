@@ -10,7 +10,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48437220-19"></script>
-   
 </head>
 <nav class="navbar navbar-custom">
   <a class="navbar-brand" href="https://rhizomeicx.com/"/><img src="./images/rhizomebanner.png" width="150" height="30" alt="RHIZOME"></a> <span class="sub-brand">ICON P-Rep Candidate </span>
@@ -19,13 +18,13 @@
 
 <div class="container">
  <h1 class="title">ICX Staking Reward Calculator</h1>
-        <div class="description" style="margin-bottom:50px">
+        <div class="description" style="margin-top:5%; margin-bottom:5%">
             <span>This tool calculates the expected ICX rewards for staking to all three categories (representatives, DApps, and EEPs). </br/> </span>
             Click <a href="https://decrypto.net/icons-icx-staking-reward-model/">here</a> to learn more about ICON's staking reward model.  </span> 
         </div>
 		
   <div class="row">
-    <div class="col-xs-6 col-md-5 border border-info" style="margin-left:50px; margin-right: 1px !important;">
+    <div class="col-xs-6 col-md-5 border border-info box-layout-stake">
       <h2>Stake</h2>
       <form name="F1" onsubmit="return func()">
 		  <div class="form-group">
@@ -44,7 +43,7 @@
 
        </div>
      </div>
-    <div class="col-xs-6 col-md-6 border border-info" style="margin-left: 1px !important;">
+    <div class="col-xs-6 col-md-5 border border-info box-layout-return">
       <h2>Returns</h2>
        
 	   <form name="F2">
@@ -53,7 +52,7 @@
 				<h4 class="float-left"> ICX/Year: </h4>
 		    </div>
 			 <div class="col">
-				<span id="T5" name="T5" class="float-right"> </span>
+				<strong><span id="T5" name="T5" class="float-right"> </span></strong>
 			</div>	
 			</div>
 			<div class="row">
@@ -61,23 +60,23 @@
 					<h4 class="float-left"> ICX/Month: </h4>
 				</div>
 				<div class="col">
-					<span id="T6" name="T6" class="float-right">  </span>
+					<strong><span id="T6" name="T6" class="float-right">  </span></strong>
 				</div>	
 		   </div>
 			<div class="row">
 			  <div class="col">
-				<h4 class="float-left"> Yearly Reward Rate: </h4> 
+				<h4 class="float-left"> Yearly Rate: </h4> 
 			</div>
 			 <div class="col">
-				<span id="T3" name="T3" class="float-right"> </span>
+				<strong><span id="T3" name="T3" class="float-right"> </span></strong>
 			 </div>	
 		    </div>
 			<div class="row">
 			 <div class="col">
-				<h4 class="float-left"> *Unstaking Period : </h4>
+				<h4 class="float-left"> *Period : </h4>
 			</div>
 			 <div class="col">
-			   <span id="T4" name="T4" class="float-right"> </span>
+			   <strong><span id="T4" name="T4" class="float-right"> </span></strong>
 			  </div>
 		   </div>
         </form>
@@ -88,13 +87,13 @@
     </div>
   </div>
 </div>
-<div class="wrapper">
+
 	<footer>
-	  <a href="https://twitter.com/RhizomeICX" target="_blank"><i class="fa fa-2x fa-twitter float-right"></i> </a>
-	  <a href="https://t.me/RhizomeICX" target="_blank"><i class="fa fa-2x fa-telegram float-right"></i> </a>
-	  <a href="https://github.com/rhizomeicx" target="_blank"><i class="fa fa-2x fa-github float-right"></i> </a>
+	  <a href="https://twitter.com/RhizomeICX" target="_blank"><i class="fa fa-lg fa-twitter float-right"></i> </a>
+	  <a href="https://t.me/RhizomeICX" target="_blank"><i class="fa fa-lg fa-telegram float-right"></i> </a>
+	  <a href="https://github.com/rhizomeicx" target="_blank"><i class="fa fa-lg fa-github float-right"></i> </a>
 	</footer>
-</div>
+
 </body>
  <script>
         window.dataLayer = window.dataLayer || [];
