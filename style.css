@@ -1,11 +1,11 @@
 html {
-     font-size: 80.5%;
+     font-size: 70.5%;
      -webkit-text-size-adjust: 100%
 }
  body {
-     background: #1f2021;
+     background: #FFFFFF !important;
      color: #000000;
-     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+     font-family: "Montserrat", sans-serif !important;
      font-size: 2rem;
      line-height: 1.4;
      -webkit-font-smoothing: antialiased;
@@ -13,14 +13,8 @@ html {
 	  display: flex;
 	  height: 100%;
 	  flex-direction: column;
-}
- a {
-     color: #fafafa;
-     text-decoration: none;
-}
- a:hover {
-     border:0;
-     text-decoration: none;
+	  background:url(./images/background.png) no-repeat !important;
+
 }
  h1 {
      font-size: 4rem;
@@ -56,31 +50,16 @@ html {
      -moz-appearance: none;
      -webkit-appearance: none;
 }
- input[type=button] {
-     background: #1fc5c9;
-     border: 0;
-     font-weight: bold;
-     text-transform: uppercase;
-}
- input[type=button]:hover {
-     background: #111;
-     color:#1fc5c9;
-}
  .description {
+	 
      color: #a9a9a9;
-     display: block;
-     margin: -1.5rem auto 0 auto;
      font-size: 1.5rem;
-     width: 25rem;
      line-height: 1.3;
 }
  .results {
      background: #000;
      padding: 2rem;
      width: 25rem;
-}
- .footer {
-     font-size: 1.5rem;
 }
 
 .navbar-custom {
@@ -94,29 +73,15 @@ html {
     color: rgba(0,0,0,.8);
 
 }
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: rgba(0,0,0,.5);
-}
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #000000;
-}
-.img-responsive {
-  max-width: 20%; /* or to whatever you want here */
-  max-height: 20%; /* or to whatever you want here */
-}
 
 footer {
-  flex: 0 0 auto;
-  display: flex;
-  color: #000000;
-  margin: 1em;
-  padding: 1em;
-  width: 80%;
+  background-color: #000000;
+  float:right;
+  position: fixed; 
+  height:8%;
+  bottom:0%;
+  width: 100%;
   border-top: 1px solid black;
-  justify-content: center;
 }
 
 footer i {
@@ -125,5 +90,20 @@ footer i {
 
 .wrapper {
   display: flex;
-  justify-content: center;
+  float: right;
 }
+
+.sub-brand {
+	color:white;
+}
+
+.fa {
+  color: #32B8BB;
+}
+
+.btn-color {
+	background-color: #32B8BB;
+	color: #FFFFFF;
+}
+
+

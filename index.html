@@ -13,22 +13,23 @@
    
 </head>
 <nav class="navbar navbar-custom">
-  <a class="navbar-brand" href="https://rhizomeicx.com/"/><img src="./images/rhizomebanner.png" width="150" height="30" alt="RHIZOME"></a>
+  <a class="navbar-brand" href="https://rhizomeicx.com/"/><img src="./images/rhizomebanner.png" width="150" height="30" alt="RHIZOME"></a> <span class="sub-brand">ICON P-Rep Candidate </span>
 </nav>
 <body>
 
 <div class="container">
- <h1 class="title bg-light">ICX Staking Reward Calculator</h1>
-        <div>
-            <span>This tool calculates the expected ICX rewards for staking to all three categories (representatives, DApps, and EEPs).</span>
-            <p>Click <a href="https://decrypto.net/icons-icx-staking-reward-model/">here</a> to learn more about ICON's staking reward model.</p>
+ <h1 class="title">ICX Staking Reward Calculator</h1>
+        <div class="description" style="margin-bottom:50px">
+            <span>This tool calculates the expected ICX rewards for staking to all three categories (representatives, DApps, and EEPs). </br/> </span>
+            Click <a href="https://decrypto.net/icons-icx-staking-reward-model/">here</a> to learn more about ICON's staking reward model.  </span> 
         </div>
+		
   <div class="row">
-    <div class="col-sm-6 border border-info">
-      <h2>INPUT</h2>
+    <div class="col-xs-6 col-md-5 border border-info" style="margin-left:50px; margin-right: 1px !important;">
+      <h2>Stake</h2>
       <form name="F1" onsubmit="return func()">
 		  <div class="form-group">
-			 <label for="exampleFormControlInput1">ICX Holdings </label>
+			 <label for="exampleFormControlInput1">ICX Staked </label>
 		   <input type="text" name="T1" class="form-control form-control-lg float-right" id="exampleFormControlInput1" placeholder="eg 10000">
 			<small id="emailHelp" class="form-text text-muted">The amount of ICX you will stake.</small>
 		  </div>
@@ -38,16 +39,31 @@
 			  <small id="tooltip" class="form-text text-muted">Staked ICX divided by the total supply of ICX. Early estimates suggest a figure of 30%.</small>
 		  </div>
 		  <div class="form-check">
-		  <button type="submit" id="calculate" class="btn btn-info btn-lg">Calculate</button>
+		  <button type="submit" id="calculate" class="btn btn-lg btn-color">Calculate</button>
 		</form>
 
        </div>
      </div>
-    <div class="col-sm-6 border border-info" style="padding-left:20px;">
-      <h2>RESULTS</h2>
+    <div class="col-xs-6 col-md-6 border border-info" style="margin-left: 1px !important;">
+      <h2>Returns</h2>
        
 	   <form name="F2">
-	   <br />
+	    <div class="row">
+		    <div class="col">
+				<h4 class="float-left"> ICX/Year: </h4>
+		    </div>
+			 <div class="col">
+				<span id="T5" name="T5" class="float-right"> </span>
+			</div>	
+			</div>
+			<div class="row">
+				<div class="col">
+					<h4 class="float-left"> ICX/Month: </h4>
+				</div>
+				<div class="col">
+					<span id="T6" name="T6" class="float-right">  </span>
+				</div>	
+		   </div>
 			<div class="row">
 			  <div class="col">
 				<h4 class="float-left"> Yearly Reward Rate: </h4> 
@@ -58,37 +74,25 @@
 		    </div>
 			<div class="row">
 			 <div class="col">
-				<h4 class="float-left"> Unstaking Period : </h4>
+				<h4 class="float-left"> *Unstaking Period : </h4>
 			</div>
 			 <div class="col">
 			   <span id="T4" name="T4" class="float-right"> </span>
 			  </div>
 		   </div>
-		   <div class="row">
-		    <div class="col">
-				<h4 class="float-left"> ICX Rewards Per Year: </h4>
-		    </div>
-			 <div class="col">
-				<span id="T5" name="T5" class="float-right"> </span>
-			</div>	
-			</div>
-			<div class="row">
-				<div class="col">
-					<h4 class="float-left"> ICX Rewards Per Month: </h4>
-				</div>
-				<div class="col">
-					<span id="T6" name="T6" class="float-right">  </span>
-				</div>	
-		   </div>
         </form>
+		
+		<small class="form-text text-muted">* The number of days your initial ICX stake is locked up. The unstaking period is not the amount of days before you can receive rewards. </small>
+		
+		
     </div>
   </div>
 </div>
 <div class="wrapper">
 	<footer>
-	  <a href="https://twitter.com/RhizomeICX" target="_blank"><i class="fa fa-twitter"></i> </a>
-	  <a href="https://t.me/RhizomeICX" target="_blank"><i class="fa fa-telegram"></i> </a>
-	  <a href="https://github.com/rhizomeicx" target="_blank"><i class="fa fa-github"></i> </a>
+	  <a href="https://twitter.com/RhizomeICX" target="_blank"><i class="fa fa-2x fa-twitter float-right"></i> </a>
+	  <a href="https://t.me/RhizomeICX" target="_blank"><i class="fa fa-2x fa-telegram float-right"></i> </a>
+	  <a href="https://github.com/rhizomeicx" target="_blank"><i class="fa fa-2x fa-github float-right"></i> </a>
 	</footer>
 </div>
 </body>
