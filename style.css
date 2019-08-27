@@ -1,15 +1,18 @@
 html {
-     font-size: 62.5%;
+     font-size: 80.5%;
      -webkit-text-size-adjust: 100%
 }
  body {
      background: #1f2021;
-     color: #fafafa;
+     color: #000000;
      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
      font-size: 2rem;
      line-height: 1.4;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
+	  display: flex;
+	  height: 100%;
+	  flex-direction: column;
 }
  a {
      color: #fafafa;
@@ -81,4 +84,48 @@ html {
  .footer {
      font-size: 1.5rem;
 }
- 
+
+.navbar-custom {
+    background-color: #000000;
+	height:60px;
+	padding: 15px 10px;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(0,0,0,.8);
+
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #000000;
+}
+.img-responsive {
+  max-width: 20%; /* or to whatever you want here */
+  max-height: 20%; /* or to whatever you want here */
+}
+
+footer {
+  flex: 0 0 auto;
+  display: flex;
+  color: #000000;
+  margin: 1em;
+  padding: 1em;
+  width: 80%;
+  border-top: 1px solid black;
+  justify-content: center;
+}
+
+footer i {
+  padding: 1em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
