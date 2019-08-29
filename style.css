@@ -4,7 +4,7 @@ html {
 }
  body {
      background: #FFFFFF !important;
-     color: #000000;
+     color: #FFFFFF;
      font-family: "Montserrat", sans-serif !important;
      line-height: 1.4;
      -webkit-font-smoothing: antialiased;
@@ -13,10 +13,14 @@ html {
 	  height: 100%;
 	  flex-direction: column;
 	  background:url(./images/background.png) no-repeat !important;
-
+	  background-position: 2.5% 50% !important; 
 }
  h1 {
      font-size: 4rem;
+}
+
+a {
+	color: #32B8BB !important;
 }
  h2 {
      font-size: 3rem;
@@ -36,7 +40,8 @@ html {
 }
  form {
      margin: 3rem 0;
-}
+} 
+
  input {
      color: #1f2021;
      font-size: 2rem;
@@ -50,7 +55,6 @@ html {
      -webkit-appearance: none;
 }
  .description {
-	 
      color: #a9a9a9;
      font-size: 1.5rem;
      line-height: 1.3;
